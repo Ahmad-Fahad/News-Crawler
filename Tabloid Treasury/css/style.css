@@ -126,12 +126,13 @@
 			margin-top: 40px;
 			font-size: 20px;
 			width: 105px;
-
+			text-transform: capitalize;
 		}
 		h3 a {
 			color: #000000;
 			font-size: 30px;
 			text-decoration: none;
+			text-transform: uppercase;
 		}
 		h3 a:hover {
 			color: #1167a8;
@@ -348,6 +349,7 @@
 		    border: 1px solid #ccc;
 		    border-radius: 4px;
 		    resize: vertical;
+		    font-family: Times New Roman;
 		}
 		input[type=submit] {
 		    background-color:#4CAF50;
@@ -466,3 +468,35 @@
 			    -ms-transform: rotate(45deg);
 			    transform: rotate(45deg);
 			}
+
+	/*  css for newsItem page */
+
+	.newsItem {
+		width: 580px;
+	}
+	.newsItem h2{
+		font-weight: normal;
+		margin-top: 40px;
+		font-size: 20px;
+		margin-bottom: 25px;
+		width: 580px;
+		text-transform: capitalize;
+	}
+	.newsItem h4 {
+		font-weight: bold;
+		font-weight: 24px;
+	}
+	.newsItem h4 a {
+		text-decoration: none;
+		font-size: 30px;
+		color: #000000;
+		text-transform: capitalize;
+	}
+	.newsItem h4 a:hover {
+		color: green;
+	}
+	.newsItem p {
+		font-weight: normal;
+		font-size: 25px;
+		text-indent: 25px;
+	}

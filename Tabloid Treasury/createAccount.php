@@ -83,7 +83,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Re-enter your Password</label>
+        <label for="lname">Re-enter Your Password</label>
       </div>
       <div class="col-75">
         <input type="Password" id="lname" name="password" placeholder="Re-enter Your Password" required="password field is empty">
@@ -116,21 +116,14 @@
     <h4>Newspapers</h4>
         <div class="row">
             <div class="col-75">
-              <label class="checkContainer">Prothom Alo <input type="Checkbox" name="newstype[]" value="prothon_alo"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Noya Diganta <input type="Checkbox" class="checkContainer" name="newstype[]" value="noya_diganta"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Amar Desh<input type="Checkbox" class="checkContainer" name="newstype[]" value="amar_desh"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Ittefaq<input type="Checkbox" class="checkContainer" name="newstype[]" value="ittefaq"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Inkilab<input type="Checkbox" class="checkContainer" name="newstype[]" value="inkilab"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">The Daily Star<input type="Checkbox" class="checkContainer" name="newstype[]" value="daily_star"><span class="checkmark"></span></label><br/>
+             
               <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newstype[]" value="aljazeera"><span class="checkmark"></span></label><br/>
               <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newstype[]" value="arabian_news"><span class="checkmark"></span></label><br/>
               <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newstype[]" value="newyork_times"><span class="checkmark"></span></label><br/>
               <label class="checkContainer">BBC<input type="Checkbox" class="checkContainer" name="newstype[]" value="bbc"><span class="checkmark"></span></label><br/>
               <label class="checkContainer">CNN<input type="Checkbox" class="checkContainer" name="newstype[]" value="cnn"><span class="checkmark"></span></label><br/>
-              
             </div>
           </div>
-     
     </div>
      <div class="row">
         <input id="accountButton" type="submit" value="Sign Up">

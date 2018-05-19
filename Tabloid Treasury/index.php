@@ -54,25 +54,25 @@
 			<h2>Home</h2>
 			<div id="article-container">
 				<h3><a href="#">News Type</a></h3>
-				<form action="#" method="POST">
+				<form action="newsItems.php" method="POST" target="_blank" >
 					<div class="row">
 				      <div class="col-25">
 				        <label for="country">Select a Type of News</label>
 				      </div>
 				      <div class="col-75">
-				        <select id="country" name="typeOfPassword">
+				        <select id="country" name="typeOfNews">
 				          <option value="politics">Politics</option>
-				          <option value="bangladesh">Bangladesh</option>
 				          <option value="economics">Economics</option>
 				          <option value="lifestyle">Life Style</option>
 				          <option value="international">International</option>
 				          <option value="technology">Technology</option>
 				          <option value="entertainment">Entertainment</option>
 				          <option value="games">Game Zone</option>
+				      </select>
 				      </div>
 				    </div>
 			<div class="row">
-				<input type="submit" value="Crawl">
+				<input type="submit" value="Crawl" name="crawl">
 			</div>
 		<!..</form>
 			</div>
@@ -84,17 +84,14 @@
 			<h4>Newspapers</h4>
 		    <div class="row">
 			        <div class="col-75">
-				        <label class="checkContainer">Prothom Alo <input type="Checkbox" name="newstype[]" value="prothon_alo"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Noya Diganta <input type="Checkbox" class="checkContainer" name="newstype[]" value="noya_diganta"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Amar Desh<input type="Checkbox" class="checkContainer" name="newstype[]" value="amar_desh"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Ittefaq<input type="Checkbox" class="checkContainer" name="newstype[]" value="ittefaq"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Inkilab<input type="Checkbox" class="checkContainer" name="newstype[]" value="inkilab"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">The Daily Star<input type="Checkbox" class="checkContainer" name="newstype[]" value="daily_star"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newstype[]" value="aljazeera"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newstype[]" value="arabian_news"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newstype[]" value="newyork_times"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">BBC<input type="Checkbox" class="checkContainer" name="newstype[]" value="bbc"><span class="checkmark"></span></label><br/>
-				        <label class="checkContainer">CNN<input type="Checkbox" class="checkContainer" name="newstype[]" value="cnn"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newspapers[]" value="aljazeera"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newspapers[]" value="arabian_news"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newspapers[]" value="newyork_times"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">BBC<input type="Checkbox" class="checkContainer" name="newspapers[]" value="bbc"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">CNN<input type="Checkbox" class="checkContainer" name="newspapers[]" value="cnn"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">The Times of India<input type="Checkbox" class="checkContainer" name="newspapers[]" value="the_times_of_india"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">USA Today<input type="Checkbox" class="checkContainer" name="newspapers[]" value="usa_today"><span class="checkmark"></span></label><br/>
+				        <label class="checkContainer">People's Daily<input type="Checkbox" class="checkContainer" name="newspapers[]" value="peoples_daily"><span class="checkmark"></span></label><br/>
 			        </div>
 			    </div>
 			</form>
