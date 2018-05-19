@@ -74,7 +74,6 @@
 			<div class="row">
 				<input type="submit" value="Crawl" name="crawl">
 			</div>
-		<!..</form>
 			</div>
 		</div>
 
