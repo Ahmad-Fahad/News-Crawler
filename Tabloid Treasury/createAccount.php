@@ -48,7 +48,7 @@
 <!.. form section...!>
 <div class="container">
   <div id="personalInfo">
-  <form action="" method="POST" >
+  <form action="signUp.php" method="POST" >
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name </label>
@@ -86,7 +86,7 @@
         <label for="lname">Re-enter Your Password</label>
       </div>
       <div class="col-75">
-        <input type="Password" id="lname" name="password" placeholder="Re-enter Your Password" required="password field is empty">
+        <input type="Password" id="lname" name="repassword" placeholder="Re-enter Your Password" required="password field is empty">
       </div>
     </div>
     </div>
@@ -117,16 +117,16 @@
         <div class="row">
             <div class="col-75">
              
-              <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newstype[]" value="aljazeera"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newstype[]" value="arabian_news"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newstype[]" value="newyork_times"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">BBC<input type="Checkbox" class="checkContainer" name="newstype[]" value="bbc"><span class="checkmark"></span></label><br/>
-              <label class="checkContainer">CNN<input type="Checkbox" class="checkContainer" name="newstype[]" value="cnn"><span class="checkmark"></span></label><br/>
+              <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newspapers[]" value="aljazeera"><span class="checkmark"></span></label><br/>
+              <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newspapers[]" value="arabian_news"><span class="checkmark"></span></label><br/>
+              <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newspapers[]" value="newyork_times"><span class="checkmark"></span></label><br/>
+              <label class="checkContainer">BBC<input type="Checkbox" class="checkContainer" name="newspapers[]" value="bbc"><span class="checkmark"></span></label><br/>
+              <label class="checkContainer">CNN<input type="Checkbox" class="checkContainer" name="newspapers[]" value="cnn"><span class="checkmark"></span></label><br/>
             </div>
           </div>
     </div>
      <div class="row">
-        <input id="accountButton" type="submit" value="Sign Up">
+        <input id="accountButton" type="submit" value="Sign Up" name="signUp">
       </div>
     </div>  
   </form>

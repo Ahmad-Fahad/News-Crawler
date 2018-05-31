@@ -3,7 +3,7 @@
 		public $host    = 'localhost';
 		public $user    = 'root';
 		public $pass    = '';
-		public $dbname  = 'hackalgo';
+		public $dbname  = 'tabloid_treasury';
 
 		public $link;  
 		public $error;   

@@ -500,3 +500,10 @@
 		font-size: 25px;
 		text-indent: 25px;
 	}
+
+	#errormsg {
+		margin-left: 450px;
+		color: red;
+		font-size: 25px;
+		margin-top: 15px;
+	}
