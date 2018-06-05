@@ -30,7 +30,7 @@ session::init();
                   FROM  `subscribers`
                   WHERE `email`   = '$email'
                   AND `password`  = '$password'";
-        $result = $db->select($qry);
+          $result = $db->select($qry);
       if($result != false){
           $value = mysqli_fetch_array($result);
           $row   = mysqli_num_rows($result);
