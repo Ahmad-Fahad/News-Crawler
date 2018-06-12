@@ -2,6 +2,8 @@
 		
 		if(isset($_GET['url'])) {
 
+			include "curl-config/config.php";
+
 			$url			    = $_GET['url'];
 			$typeOfNews         = $_GET['newsType'];
 			$newspaper          = $_GET['newspaper'];
@@ -29,7 +31,7 @@
 
 			
 
-			include "curl-config/config.php";
+			
 
 			$html = getData($url);
 

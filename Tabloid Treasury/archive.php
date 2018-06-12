@@ -54,3 +54,7 @@
   </div>
 
   <div class="clear"></div>
+
+  <h1>
+    To keep Notes you have to create a account first
+  </h1>
