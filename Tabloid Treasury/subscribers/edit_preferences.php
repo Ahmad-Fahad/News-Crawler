@@ -21,13 +21,13 @@
 
           $value = mysqli_fetch_array($result);
 
-	      $news_types  = $value['types'];
+    	    $news_types  = $value['types'];
 
-		  $news_types  = explode(',', $news_types);
+    		  $news_types  = explode(',', $news_types);
 
-		  $news_papers = $value['newspapers'];
+    		  $news_papers = $value['newspapers'];
 
-		  $news_papers = explode(',', $news_papers);
+    		  $news_papers = explode(',', $news_papers);
       
 
 
@@ -61,11 +61,11 @@
 
     <div id="menu-bar-2-container">
       <div id="menu-bar-2">
-        <a href="index.php">Home</a>
-        <a href="newspapers.php">Newspapers</a>
-        <a href="help.php">Help</a>
-        <a href="feedback.php">Feedback</a>
-        <a href="credit.php">Credit</a>
+        <a href="home.php">Home</a>
+        <a href="../newspapers.php">Newspapers</a>
+        <a href="../help.php">Help</a>
+        <a href="../feedback.php">Feedback</a>
+        <a href="../credit.php">Credit</a>
         <a href="archive.php">Archive</a>
         <a href="notes.php">Notes</a>
       </div>

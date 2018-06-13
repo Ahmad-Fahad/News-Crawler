@@ -542,3 +542,66 @@
 		font-size: 14px;
 		padding: 8px;
 	}
+
+	#date {
+
+	}
+	#note {
+		margin-bottom: 80px;
+	}
+	#reference {
+
+	}
+	#go_site {
+
+	}
+	#go_site a{
+		color: #000000;
+		text-decoration: none;
+
+	}
+	#go_site a:hover {
+		color: green;
+		font-size: 18px;
+
+	}
+	#about_news {
+		
+	}
+	#actions {
+		float: right;
+	}
+	#edit {
+		    color: #000000;
+		    text-decoration: none;
+		    margin: 5px;
+		    border: 1px solid #000000; 
+		    padding-left: 20px;
+		    padding-right: 20px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+	}
+	#edit:hover {
+		color: #ffffff;
+		background: blue;
+	}
+	#delete {
+
+		color: #000000;
+	    text-decoration: none;
+	    margin: 5px;
+	    border: 1px solid #000000;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	   
+	}
+	#delete:hover {
+		color: #ffffff;
+		background: red;
+	}
+
+	#note_editor textarea{
+		font-size: 20px;
+	}

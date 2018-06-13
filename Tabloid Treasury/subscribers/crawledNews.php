@@ -129,11 +129,11 @@
 
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
-				<a href="index.php">Home</a>
-		        <a href="newspapers.php">Newspapers</a>
-		        <a href="help.php">Help</a>
-		        <a href="feedback.php">Feedback</a>
-		        <a href="credit.php">Credit</a>
+				<a href="home.php">Home</a>
+		        <a href="../newspapers.php">Newspapers</a>
+		        <a href="../help.php">Help</a>
+		        <a href="../feedback.php">Feedback</a>
+		        <a href="../credit.php">Credit</a>
 		        <a href="archive.php">Archive</a>
 		        <a href="notes.php">Notes</a>
 			</div>
@@ -173,7 +173,7 @@
 			</div>
 		</div>
 		<div id="notes">
-			<h3>Take some notes</h3>
+			<h3>Take Short Notes</h3>
 			<form action="" method="POST">
 				<textarea id="editor" name="editor"></textarea>
 				<input type="submit" id="save_notes" name="save" value="Save Notes">

@@ -1,20 +1,22 @@
 <?php
 
+ob_start();
+
 include "../lib/session.php"; 
 include "../lib/Database.php"; 
 include "../methods/popUp.php";
 
 session::cheaksession();
 
-$id  = $_SESSION['userId'];
-
 $db = new Database();
 
-$qry = "SELECT * 
-        FROM  `notes`
-        WHERE `s_id`   = '$id'";
+$note_id = $_GET['note_id'];
 
-$result = $db->select($qry);
+$qry = "SELECT * 
+        FROM `notes`
+        WHERE `id`   = '$note_id'";
+
+$result = $db->delete($qry);
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +24,7 @@ $result = $db->select($qry);
 <head>
   <title>Tabloid Treasury</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 </head>
 <body>
 <div id="topbar">
@@ -46,10 +49,10 @@ $result = $db->select($qry);
     <div id="menu-bar-2-container">
       <div id="menu-bar-2">
        <a href="home.php">Home</a>
-        <a href="newspapers.php">Newspapers</a>
-        <a href="help.php">Help</a>
-        <a href="feedback.php">Feedback</a>
-        <a href="credit.php">Credit</a>
+        <a href="../newspapers.php">Newspapers</a>
+        <a href="../help.php">Help</a>
+        <a href="../feedback.php">Feedback</a>
+        <a href="../credit.php">Credit</a>
         <a href="archive.php">Archive</a>
         <a href="#">Notes</a>
       </div>
@@ -70,46 +73,32 @@ $result = $db->select($qry);
     <div id="main-article">
       <h2>Notes</h2>
     </div>
-
+    <div id="edit_plane">
 <?php
 
-if($result->num_rows > 0) {
-
-    while ($row = $result->fetch_assoc()) {
+if($result) {
+  
+    $note = mysqli_fetch_array($result);
 
 ?>
-    <div id="note">
-      <div id="date">
-          <p><?php echo $row['date']; ?></p>  
-      </div>
-      <div id="note_section">
-        <p><?php echo $row['note']; ?> </p>        
-      </div>
-      <div id="reference">
-        
-        <div id="about_news">
-          <h2><?php echo $row['newspaper']; ?></h2>
-          <h3><?php echo $row['newstype']; ?></h3>
-          <div id="actions">
-            <a id="edit" href="edit_note_interface.php?note_id=<?php echo $row['id']?>">edit</a>
-            <a id="delete" href="delete_note.php?note_id=<?php echo $row['id']?>">delete</a>
-          </div>
-          <div id="go_site">
-            <a href="<?php echo $row['url']; ?>">Go to the news</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
+      <form action="edit_note.php?note_id=<?php echo $note['id']; ?>" method="POST">
+
+        <textarea id="note_editor" name="editor_text">
+           <?php echo $note['note']; ?>
+        </textarea>
+
 <?php
 
-    }
 }
 
-
 ?>
+        <input type="submit" id="save_notes" name="save" value="Save">
+      </form>
+      <script>
+        CKEDITOR.replace( 'note_editor' );
+      </script>
+    </div>
 
   </div>
 
-  <div class="clear"></div>
-  
+</body>

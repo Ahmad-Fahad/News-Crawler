@@ -26,11 +26,11 @@
 
     <div id="menu-bar-2-container">
       <div id="menu-bar-2">
-        <a href="index.php">Home</a>
-        <a href="newspapers.php">Newspapers</a>
-        <a href="help.php">Help</a>
-        <a href="feedback.php">Feedback</a>
-        <a href="credit.php">Credit</a>
+        <a href="home.php">Home</a>
+        <a href="../newspapers.php">Newspapers</a>
+        <a href="../help.php">Help</a>
+        <a href="../feedback.php">Feedback</a>
+        <a href="../credit.php">Credit</a>
         <a href="#">Archive</a>
         <a href="notes.php">Notes</a>
       </div>

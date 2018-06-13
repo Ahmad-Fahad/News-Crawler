@@ -2,12 +2,6 @@
 
 ob_start();
 
-
-
-    
-
-	if(isset($_POST['signUp'])) {
-
 		include "../lib/session.php"; 
 	    include "../lib/Database.php";
 	    include "../helpers/format.php"; 
@@ -16,6 +10,8 @@ ob_start();
         session::cheaksession();
 
 		$db = new Database();
+
+	if(isset($_POST['signUp'])) {
 
 		$id = $_SESSION['userId'];
 
