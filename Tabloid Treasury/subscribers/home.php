@@ -4,6 +4,8 @@
       include "../curl-config/config.php";
 
             session::cheaksession();
+
+            $db = new Database();
 ?>
 <?php
 
@@ -123,6 +125,8 @@
 					break;
 			}
 
+
+
 		?>
 		
 
@@ -172,14 +176,14 @@
 			$titleDelimeter   = ' /<span class=\"title-link__title-text\">(.*?)<\/span>/';
 			$linkDelimeter    = '/<a href=\"(.*?)\" class="title-link">/';
 
-			// include "../curl-config/config.php";
-
 			$html = getData($url);
 
 			$countTitle = preg_match_all($titleDelimeter, $html, $titles);
 
-			$countLink  = preg_match_all($linkDelimeter, $html, $links);	
+			$countLink  = preg_match_all($linkDelimeter, $html, $links);
 
 	}
 	
+	
+
 	?>

@@ -4,6 +4,7 @@
 	    include "../helpers/format.php";
 	    include "../curl-config/config.php";
 	    include "../methods/popUp.php";
+	    //include "../RE_config/config.php";
 
         session::cheaksession();
 

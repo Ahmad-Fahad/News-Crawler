@@ -18,7 +18,7 @@
 			self::init();
 			if(self::get("login") == false){
 				self::destroy();
-				header("Location: ../login.php");
+				header("Location: login.php");
 				exit();
 			}
 		}

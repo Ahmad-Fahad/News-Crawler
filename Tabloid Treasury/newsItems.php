@@ -26,7 +26,7 @@
 		
 		<div id="sign-in" class="topbar-section">
 			<img id="signin-image" src="img/signIn.png">
-			<span id="signin-text"><a href="login.php">Log In</a></span>
+			<span id="signin-text"><a href="subscribers/login.php">Log In</a></span>
 		</div>
 		<div id="topbar-section topbar-menu">
 			<span class="menu-text" =><a href="createAccount.php"> Create Account</a></span>

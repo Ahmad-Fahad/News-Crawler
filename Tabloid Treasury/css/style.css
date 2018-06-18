@@ -178,7 +178,7 @@
 			width: 200px;
 			float: right;
 			position: relative;
-			top: -365px;
+			top: -480px;
 		}
 		.side-bar-link {
 			text-decoration: none;
@@ -459,6 +459,7 @@
 			}
 
 			/* Style the checkmark/indicator */
+
 			.checkContainer .checkmark:after {
 			    left: 6px;
 			    top: 1px;
@@ -605,3 +606,135 @@
 	#note_editor textarea{
 		font-size: 20px;
 	}
+
+
+
+
+/*   admin panlel  */
+
+#admin-page-container {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#dashboard {
+		float: right;
+		width: 80%;
+		position: relative;
+		top: -1000px;
+		padding-top: 200px;
+		
+}
+
+#dashboard h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#dashboard h1:hover {
+	font-size: 50px;
+}
+
+#menu-bar-left {
+		width: 30%;
+		position: relative;
+		top: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color:  #333333;
+    font-size: 23px;
+}
+
+
+.sidenav {
+    eight: 100%;
+	width: 20%;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 20px;
+	height: 1012px;
+	position: relative;
+	top: 55px;
+}
+
+.sidenav a {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #333333;
+    font-size: 23px;
+}
+
+/*  subscribers list */
+
+#list_pane {
+		float: right;
+		width: 80%;
+		position: relative;
+		top: -1000px;
+		padding-top: 42px;
+		
+}
+
+#subscribers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#subscribers td, #subscribers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#subscribers tr:nth-child(even){background-color: #f2f2f2;}
+
+#subscribers tr:hover {background-color: #ddd;}
+
+#subscribers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1C351C;
+    color: white;
+}
+
+#ban {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+
+#ban:hover {
+
+	color: blue;
+	
+}
