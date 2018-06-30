@@ -1,5 +1,7 @@
 <?php
 
+	include "curl-config/config.php";
+
 	if(isset($_POST['crawl'])) {
 
 		$countTitle = 0;
@@ -64,18 +66,25 @@
 	<div class="clear"></div>
 
 	<div id="page-container">
-		<div id="main-article">
-			<h2><?php echo $typeOfNews; ?></h2>  
+		 
 
-		<?php
+<?php
 
 		$newsPapers = $_POST['newspapers'];
 
 		foreach ($newsPapers as $newspaper) {
+?>
 
+			<div id="main-article">
+			<h2><?php echo $typeOfNews; ?></h2> 
+
+<?php
 			switch ($newspaper) {
 				case 'bbc':
 					bbc($typeOfNews);
+					break;
+				case 'aljazeera':
+					aljazeera($typeOfNews);
 					break;
 				
 				default:
@@ -91,21 +100,37 @@
 				<h3><a href="#"><?php echo $newspaper; ?></a></h3>     
 		<?php
 		
-			}
+			//}
 		
-		?>
+		?> 
 				<div class="newsItem">	
 				<?php
 
 					if($countTitle > 0) {
 
-						for($i=0; $i<15; $i++) {
+						for($i=0; $i<10; $i++) {
 
 				?>						  							             
 					<h2><?php echo $titles[1][$i]; ?></h2>
 					<?php 
 
-						$url = 'http://www.bbc.com'.$links[1][$i]; 
+						//$url = 'http://www.bbc.com'.$links[1][$i]; 
+
+					switch ($newspaper) {
+						case 'bbc':
+							$url = 'http://www.bbc.com'; 
+							break;
+						case 'aljazeera':
+							$url = 'https://www.aljazeera.com'; 
+							break;
+						
+						default:
+							echo "This newspaper is not added in our site";
+							break;
+					}
+
+						$url = $url.''.$links[1][$i]; 
+
 					?>
 					<a class="topic-link" href="crawledNews.php?url=<?php echo $url; ?>&newsType=<?php echo $typeOfNews; ?>&newspaper=<?php echo $newspaper; ?>" target="_blank">Read The News</a>
 					<hr id="article-hr" align="left">	
@@ -121,7 +146,14 @@
 				</div>
 			</div>
 		</div>
+<?php
+		
+		}
+		
+?> 
 	</div>
+
+
 
 <?php
 
@@ -133,7 +165,27 @@
 			$titleDelimeter   = ' /<span class=\"title-link__title-text\">(.*?)<\/span>/';
 			$linkDelimeter    = '/<a href=\"(.*?)\" class="title-link">/';
 
-			include "curl-config/config.php";
+			$html = getData($url);
+
+			$countTitle = preg_match_all($titleDelimeter, $html, $titles);
+
+			$countLink  = preg_match_all($linkDelimeter, $html, $links);	
+
+	}
+
+	function aljazeera($typeOfNews) {
+
+		global $countTitle, $countLink, $titles, $links;
+
+		if($typeOfNews == 'politics') {
+
+			$typeOfNews = 'news';
+
+			}
+
+			$url			  = "https://www.aljazeera.com/".$typeOfNews;
+			$titleDelimeter   = ' /<h2 class=\"topics-sec-item-head\">(.*?)<\/h2>/';
+			$linkDelimeter    = '/<a class=\"centered-video-icon\" href=\"(.*?)\">/';
 
 			$html = getData($url);
 

@@ -99,27 +99,36 @@
 
 	<div id="page-container">
 
-		<?php  foreach($types as $typeOfNews) {  ?>
+		<?php  
+
+			foreach($types as $typeOfNews) { 
+
+				foreach ($newsPapers as $newspaper) {
+
+
+		 ?>
 
 		<div id="main-article">
 				<?php   
 
-					if($typeOfNews == 'politics') {
-						$typeOfNews = 'world';
-					}
+					// if($typeOfNews == 'politics') {
+					// 	$typeOfNews = 'world';
+					// }
 
 				 ?>
 			<h2><?php echo $typeOfNews; ?></h2>  
 
 		<?php
 
-		foreach ($newsPapers as $newspaper) {
-
+		
 			switch ($newspaper) {
 				case 'bbc':
 					bbc($typeOfNews);
 					break;
-				
+				case 'aljazeera':
+					aljazeera($typeOfNews);
+					break;
+
 				default:
 					echo "This newspaper is not added in our site";
 					break;
@@ -135,7 +144,7 @@
 				<h3><a href="#"><?php echo $newspaper; ?></a></h3>     
 		<?php
 		
-			}
+			//}
 		
 		?>
 				<div class="newsItem">	
@@ -149,7 +158,20 @@
 					<h2><?php echo $titles[1][$i]; ?></h2>
 					<?php 
 
-						$url = 'http://www.bbc.com'.$links[1][$i]; 
+						//$url = 'http://www.bbc.com'.$links[1][$i]; 
+
+						switch ($newspaper) {
+						case 'bbc':
+							$url = 'http://www.bbc.com'; 
+							break;
+						case 'aljazeera':
+							$url = 'https://www.aljazeera.com'; 
+							break;
+						
+						
+					}
+
+						$url = $url.''.$links[1][$i]; 
 					?>
 					<a class="topic-link" href="crawledNews.php?url=<?php echo $url; ?>&newsType=<?php echo $typeOfNews; ?>&newspaper=<?php echo $newspaper; ?>" target="_blank">Read The News</a>
 					<hr id="article-hr" align="left">	
@@ -163,7 +185,13 @@
 				</div>
 			</div>
 		</div>
-		<?php } ?>
+
+<?php 
+
+	} 
+} 
+
+?>
 	</div>
 
 <?php
@@ -171,6 +199,10 @@
 	function bbc($typeOfNews) {
 
 		global $countTitle, $countLink, $titles, $links;
+
+		    if($typeOfNews == 'politics') {
+				$typeOfNews = 'world';
+			}
 
 			$url			  = "http://www.bbc.com/news/".$typeOfNews;
 			$titleDelimeter   = ' /<span class=\"title-link__title-text\">(.*?)<\/span>/';
@@ -184,6 +216,26 @@
 
 	}
 	
-	
+	function aljazeera($typeOfNews) {
+
+		global $countTitle, $countLink, $titles, $links;
+
+		if($typeOfNews == 'politics') {
+
+			$typeOfNews = 'news';
+
+		}
+
+			$url			  = "https://www.aljazeera.com/".$typeOfNews;
+			$titleDelimeter   = ' /<h2 class=\"topics-sec-item-head\">(.*?)<\/h2>/';
+			$linkDelimeter    = '/<a class=\"centered-video-icon\" href=\"(.*?)\">/';
+
+			$html = getData($url);
+
+			$countTitle = preg_match_all($titleDelimeter, $html, $titles);
+
+			$countLink  = preg_match_all($linkDelimeter, $html, $links);	
+
+	}
 
 	?>

@@ -8,10 +8,10 @@
 <div id="topbar">
     <div id="sign-in" class="topbar-section">
       <img id="signin-image" src="../img/signIn.png">
-      <span id="signin-text"><a href="logout.php">Log Out</a></span>
+      <span id="signin-text"><a href="logout.php">Log In</a></span>
     </div>
     <div id="topbar-section topbar-menu">
-      <span class="menu-text" =><a href="edit_preferences.php">Settings</a></span>
+      <span class="menu-text" =><a href="edit_preferences.php"> Create Account</a></span>
     </div>
   </div>
   <div class="clear">
@@ -26,12 +26,12 @@
 
     <div id="menu-bar-2-container">
       <div id="menu-bar-2">
-        <a href="home.php">Home</a>
-        <a href="newspapers.php">Newspapers</a>
+        <a href="index.php">Home</a>
+        <a href="#">Newspapers</a>
         <a href="help.php">Help</a>
         <a href="feedback.php">Feedback</a>
         <a href="credit.php">Credit</a>
-        <a href="#">Archive</a>
+        <a href="archive.php">Archive</a>
         <a href="notes.php">Notes</a>
       </div>
     </div>
@@ -49,7 +49,7 @@
 
   <div id="page-container">
     <div id="main-article">
-      <h2>Archive</h2>
+      <h2>Newspapers</h2>
     </div>
   </div>
 

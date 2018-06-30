@@ -738,3 +738,24 @@ li a:hover {
 	color: blue;
 	
 }
+
+#view {
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+}
+#view:hover {
+	color: blue;
+}
+#delete {
+
+}
+#delete:hover {
+
+}
+#reply {
+
+}
+#reply:hover {
+
+}

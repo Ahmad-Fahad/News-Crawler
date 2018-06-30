@@ -31,7 +31,7 @@ $result = $db->select($qry);
       <span id="signin-text"><a href="logout.php">Log Out</a></span>
     </div>
     <div id="topbar-section topbar-menu">
-      <span class="menu-text" =><a href="edit_preferences.php">Settings</a></span>
+      <span class="menu-text" =><a href="#">Settings</a></span>
     </div>
   </div>
   <div class="clear">
@@ -48,7 +48,7 @@ $result = $db->select($qry);
       <div id="menu-bar-top">
         <ul>
           <li><a href="index.php">Dashboard</a></li>
-          <li><a href="#">Inbox</a></li>
+          <li><a href="inbox.php">Inbox</a></li>
           <li><a href="#">Subscribers List</a></li>
         </ul>
       </div>

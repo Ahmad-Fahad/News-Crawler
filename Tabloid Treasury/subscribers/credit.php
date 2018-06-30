@@ -11,7 +11,7 @@
       <span id="signin-text"><a href="logout.php">Log Out</a></span>
     </div>
     <div id="topbar-section topbar-menu">
-      <span class="menu-text" =><a href="edit_preferences.php">Settings</a></span>
+      <span class="menu-text" =><a href="createAccount.php">Settings</a></span>
     </div>
   </div>
   <div class="clear">
@@ -30,8 +30,8 @@
         <a href="newspapers.php">Newspapers</a>
         <a href="help.php">Help</a>
         <a href="feedback.php">Feedback</a>
-        <a href="credit.php">Credit</a>
-        <a href="#">Archive</a>
+        <a href="#">Credit</a>
+        <a href="archive.php">Archive</a>
         <a href="notes.php">Notes</a>
       </div>
     </div>
@@ -49,7 +49,7 @@
 
   <div id="page-container">
     <div id="main-article">
-      <h2>Archive</h2>
+      <h2>Credit</h2>
     </div>
   </div>
 

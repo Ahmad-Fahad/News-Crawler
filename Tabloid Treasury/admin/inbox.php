@@ -3,11 +3,20 @@
 ob_start();
 
 include "../lib/session.php"; 
+include "../lib/Database.php"; 
+include "../methods/popUp.php";
 
 session::cheaksession();
 
-?>
+$db = new Database();
 
+$qry = "SELECT * 
+        FROM  `inbox`
+        ORDER BY `id` DESC";
+
+$result = $db->select($qry);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,8 +46,8 @@ session::cheaksession();
     <div id="menu-bar-2-container">
       <div id="menu-bar-top">
         <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="inbox.php">Inbox</a></li>
+          <li><a href="index.php">Dashboard</a></li>
+          <li><a href="#">Inbox</a></li>
           <li><a href="subscribers_list.php">Subscribers List</a></li>
         </ul>
       </div>
@@ -63,8 +72,53 @@ session::cheaksession();
         <a href="#">Add type</a>
     </div>
 
-    <div id="dashboard">
-      <h1>Welcome to admin panel</h1>
+    <div id="list_pane">
+       <table id="subscribers">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+<?php
+
+if($result->num_rows > 0) {
+
+    while ($row = $result->fetch_assoc()) {
+
+        
+?>
+
+          <tr>
+            <td><?php echo $row['firstname']; ?></td>
+            <td><?php echo $row['lastname']; ?></td>
+            <td><?php echo $row['message']; ?></td>
+            <td>
+<?php
+
+    if($row['status'] != 1) {
+        echo "Unseen";
+    }
+    else {
+      echo "Seen";
+    }
+
+?>
+            </td>
+            <td><a id="view" href="view_email.php?email_id=<?php echo $row['id']; ?>">View</a></td>
+          </tr>
+<?php
+
+  }
+}
+
+?>
+
+
+  
+</table>
+
     </div>
 
   </div>

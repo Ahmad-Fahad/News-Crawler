@@ -27,10 +27,21 @@
 				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
 
 			}
+			function aljazeera() {
+
+				global $titleDelimeter, $paragraphDelimeter;
+
+				$titleDelimeter     = '!<h1 class=\"post-title\">(.*?)<\/h1>!';
+				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
+
+			}
 
 			switch ($newspaper) {
 				case 'bbc':
 					bbc();
+					break;
+				case 'aljazeera':
+					aljazeera();
 					break;
 				
 				default:
@@ -131,10 +142,10 @@
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
 				<a href="home.php">Home</a>
-		        <a href="../newspapers.php">Newspapers</a>
-		        <a href="../help.php">Help</a>
-		        <a href="../feedback.php">Feedback</a>
-		        <a href="../credit.php">Credit</a>
+		        <a href="newspapers.php">Newspapers</a>
+		        <a href="help.php">Help</a>
+		        <a href="feedback.php">Feedback</a>
+		        <a href="credit.php">Credit</a>
 		        <a href="archive.php">Archive</a>
 		        <a href="notes.php">Notes</a>
 			</div>

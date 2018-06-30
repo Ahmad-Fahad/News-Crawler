@@ -18,10 +18,21 @@
 				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
 
 			}
+			function aljazeera() {
+
+				global $titleDelimeter, $paragraphDelimeter;
+
+				$titleDelimeter     = '!<h1 class=\"post-title\">(.*?)<\/h1>!';
+				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
+
+			}
 
 			switch ($newspaper) {
 				case 'bbc':
 					bbc();
+					break;
+				case 'aljazeera':
+					aljazeera();
 					break;
 				
 				default:
@@ -42,6 +53,8 @@
 			$countTitle = preg_match_all($titleDelimeter, $html, $title);
 
 			$countPara  = preg_match_all($paragraphDelimeter, $html, $paragraphs);
+
+			
 
 			?>
 <?php

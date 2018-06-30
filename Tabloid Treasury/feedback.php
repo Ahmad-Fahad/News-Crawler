@@ -1,3 +1,43 @@
+<?php
+
+include "methods/popUp.php";
+include "helpers/format.php";
+include "lib/Database.php";
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	$fm = new format();
+	$db = new Database();
+	
+	$firstname  = $_POST['fname'];
+ 	$lastname   = $_POST['lname'];
+ 	$email 		= $_POST['email'];
+ 	$message 	= $_POST['feedback'];
+
+ 	$firstname  = $fm->validation($firstname);
+ 	$lastname   = $fm->validation($lastname);
+ 	$email      = $fm->validation($email);
+ 	$message 	= $fm->validation($message);
+
+ 	$firstname   = mysqli_real_escape_string($db->link,$firstname);
+ 	$lastname    = mysqli_real_escape_string($db->link,$lastname);
+ 	$email  	 = mysqli_real_escape_string($db->link,$email);
+ 	$message     = mysqli_real_escape_string($db->link,$message);
+
+ 	$qry = "INSERT INTO `inbox`(`firstname`,`lastname`,`email`,`message`)
+ 	  		VALUES('$firstname','$lastname','$email','$message')";
+
+ 	  		$result = $db->insert($qry);
+ 	  		
+ 	  		if($result){
+ 	  			confirm("Message sending successfully");
+ 	  		}
+ 	  		else{
+ 	  			alert("Message sending failed");
+ 	  		}
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +108,7 @@
         <label for="fname">First Name </label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="fname" placeholder="Enter your first name...">
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name..." >
       </div>
     </div>
     <div class="row">
@@ -84,7 +124,7 @@
         <label for="email">Your E-mail  </label>
       </div>
       <div class="col-75">
-        <input type="text" id="email" name="email" placeholder="Your email address...">
+        <input type="text" id="email" name="email" placeholder="Your email address..." required="There is no email address">
       </div>
     </div>
     <div class="row">
@@ -92,7 +132,7 @@
         <label for="feedback">Your Messase   </label>
       </div>
       <div class="col-75">
-        <input type="textarea" id="feedback" name="feedback" placeholder="Your feedback...">
+        <input type="textarea" id="feedback" name="feedback" placeholder="Your feedback..." required="Messase field is empty">
       </div>
     </div>
     <div class="row">
