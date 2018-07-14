@@ -68,7 +68,7 @@ session::init();
         <span id="signin-text"><a href="#">Log In</a></span>
       </div>
       <div id="topbar-section topbar-menu">
-        <span class="menu-text" =><a href="#"> Forgot Password</a></span>
+        <span class="menu-text" =><a href="send_code.php"> Forgot Password</a></span>
       </div>
     </div>
     <div class="clear">
@@ -84,7 +84,7 @@ session::init();
       <div id="menu-bar-2-container">
         <div id="menu-bar-2">
           <a href="../index.php">Home</a>
-          <a href="../newspapers.php">Newspapers</a>
+          <a href="../newspapers.php">Newsportal</a>
           <a href="../help.php">Help</a>
           <a href="../feedback.php">Feedback</a>
           <a href="../credit.php">Credit</a>

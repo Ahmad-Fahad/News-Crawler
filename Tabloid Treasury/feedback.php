@@ -71,7 +71,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
 				<a href="index.php">Home</a>
-		        <a href="newspapers.php">Newspapers</a>
+		        <a href="newspapers.php">News portal</a>
 		        <a href="help.php">Help</a>
 		        <a href="#">Feedback</a>
 		        <a href="credit.php">Credit</a>

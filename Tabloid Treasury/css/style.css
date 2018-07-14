@@ -759,3 +759,23 @@ li a:hover {
 #reply:hover {
 
 }
+
+.forgot {
+
+	background: #ffffff;
+	color: #000000;
+	text-align: center;
+	padding: 15px 32px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+
+
+.forgot:hover {
+
+	font-size: 18px;
+
+}

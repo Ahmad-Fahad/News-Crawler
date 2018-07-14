@@ -26,6 +26,14 @@
 				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
 
 			}
+			function prothomalo() {
+
+				global $titleDelimeter, $paragraphDelimeter;
+
+				$titleDelimeter     = '!<h1 class=\"title mb10\">(.*?)<\/h1>!';
+				$paragraphDelimeter   = '/<p>(.*?)<\/p>/';
+
+			}
 
 			switch ($newspaper) {
 				case 'bbc':
@@ -33,6 +41,9 @@
 					break;
 				case 'aljazeera':
 					aljazeera();
+					break;
+				case 'prothomalo':
+					prothomalo();
 					break;
 				
 				default:
@@ -98,7 +109,7 @@
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
 				<a href="index.php">Home</a>
-		        <a href="newspapers.php">Newspapers</a>
+		        <a href="newspapers.php">News portal</a>
 		        <a href="help.php">Help</a>
 		        <a href="feedback.php">Feedback</a>
 		        <a href="credit.php">Credit</a>

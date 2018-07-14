@@ -47,7 +47,7 @@
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
 				<a href="index.php">Home</a>
-		        <a href="newspapers.php">Newspapers</a>
+		        <a href="newspapers.php">News portal</a>
 		        <a href="help.php">Help</a>
 		        <a href="feedback.php">Feedback</a>
 		        <a href="credit.php">Credit</a>
@@ -86,7 +86,13 @@
 				case 'aljazeera':
 					aljazeera($typeOfNews);
 					break;
-				
+				case 'prothomalo':
+					prothomalo($typeOfNews);
+					break;
+				case 'dailynayadiganta':
+					dailynayadiganta($typeOfNews);
+					break;
+
 				default:
 					echo "This newspaper is not added in our site";
 					break;
@@ -108,7 +114,7 @@
 
 					if($countTitle > 0) {
 
-						for($i=0; $i<10; $i++) {
+						for($i=0; $i<7; $i++) {
 
 				?>						  							             
 					<h2><?php echo $titles[1][$i]; ?></h2>
@@ -122,6 +128,12 @@
 							break;
 						case 'aljazeera':
 							$url = 'https://www.aljazeera.com'; 
+							break;
+						case 'prothomalo':
+							$url = 'http://www.prothomalo.com'; 
+							break;
+						case 'dailynayadiganta':
+							$url = 'http://www.dailynayadiganta.com/online/'; 
 							break;
 						
 						default:
@@ -186,6 +198,46 @@
 			$url			  = "https://www.aljazeera.com/".$typeOfNews;
 			$titleDelimeter   = ' /<h2 class=\"topics-sec-item-head\">(.*?)<\/h2>/';
 			$linkDelimeter    = '/<a class=\"centered-video-icon\" href=\"(.*?)\">/';
+
+			$html = getData($url);
+
+			$countTitle = preg_match_all($titleDelimeter, $html, $titles);
+
+			$countLink  = preg_match_all($linkDelimeter, $html, $links);	
+
+	}
+
+	function prothomalo($typeOfNews) {
+
+		global $countTitle, $countLink, $titles, $links;
+
+	
+
+			$url			  = "http://www.prothomalo.com/".$typeOfNews;
+			$titleDelimeter   = ' /<span class=\"title\">(.*?)<\/span>/';
+			$linkDelimeter    = '/<a class=\"link_overlay\" href=\"(.*?)\"><\/a>/';
+
+			$html = getData($url);
+
+			$countTitle = preg_match_all($titleDelimeter, $html, $titles);
+
+			$countLink  = preg_match_all($linkDelimeter, $html, $links);	
+
+	}
+
+	function dailynayadiganta($typeOfNews) {
+
+		global $countTitle, $countLink, $titles, $links;
+
+		if($typeOfNews == 'technology') {
+
+			$typeOfNews = 'science-technology/14';
+
+			}
+
+			$url			  = "http://www.dailynayadiganta.com/".$typeOfNews;
+			$titleDelimeter   = ' /<strong>(.*?)<\/strong>/';
+			$linkDelimeter    = '/ <a href=\"http:\/\/www.dailynayadiganta\.com\/online\/(.*?)\">/';
 
 			$html = getData($url);
 

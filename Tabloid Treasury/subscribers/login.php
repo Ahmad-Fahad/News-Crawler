@@ -84,7 +84,7 @@ session::init();
       <div id="menu-bar-2-container">
         <div id="menu-bar-2">
           <a href="../index.php">Home</a>
-          <a href="../newspapers.php">Newspapers</a>
+          <a href="../newspapers.php">News portal</a>
           <a href="../help.php">Help</a>
           <a href="../feedback.php">Feedback</a>
           <a href="../credit.php">Credit</a>
@@ -107,7 +107,7 @@ session::init();
     <form action="" method="POST">
       <div class="row">
         <div class="col-25">
-          <label for="fname">User Name</label>
+          <label for="fname">Email </label>
         </div>
         <div class="col-75">
           <input type="text" id="fname" name="email" placeholder="Your E-mail address..." required="E-mail field is empty">
@@ -123,6 +123,7 @@ session::init();
       </div>
       <div class="row">
         <input type="submit" id="seperate" class="button button1" name="login" value="Log In">
+        <a href="send_code.php" id="seperate" class="forgot">Forgot pasword</a>
       </div>
     </form>
 </div>

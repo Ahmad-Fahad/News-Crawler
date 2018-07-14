@@ -30,7 +30,7 @@
 		<div id="menu-bar-2-container">
 			<div id="menu-bar-2">
 				<a href="#">Home</a>
-		        <a href="newspapers.php">Newspapers</a>
+		        <a href="newspapers.php">News portal</a>
 		        <a href="help.php">Help</a>
 		        <a href="feedback.php">Feedback</a>
 		        <a href="credit.php">Credit</a>
@@ -80,9 +80,11 @@
 		<div class="clear"></div>
 
 		<div id="side-bar">
-			<h4>Newspapers</h4>
+			<h4>News portals</h4>
 		    <div class="row">
 			        <div class="col-75">
+			        	<label class="checkContainer">নয়া দিগন্ত<input type="Checkbox" class="checkContainer" name="newspapers[]" value="dailynayadiganta"><span class="checkmark"></span></label><br/>
+			        	<label class="checkContainer">প্রথম আলো<input type="Checkbox" class="checkContainer" name="newspapers[]" value="prothomalo"><span class="checkmark"></span></label><br/>
 				        <label class="checkContainer">Aljazeera<input type="Checkbox" class="checkContainer" name="newspapers[]" value="aljazeera"><span class="checkmark"></span></label><br/>
 				        <label class="checkContainer">Arabian News<input type="Checkbox" class="checkContainer" name="newspapers[]" value="arabian_news"><span class="checkmark"></span></label><br/>
 				        <label class="checkContainer">Newyork Times<input type="Checkbox" class="checkContainer" name="newspapers[]" value="newyork_times"><span class="checkmark"></span></label><br/>

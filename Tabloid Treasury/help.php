@@ -27,7 +27,7 @@
     <div id="menu-bar-2-container">
       <div id="menu-bar-2">
         <a href="index.php">Home</a>
-        <a href="newspapers.php">Newspapers</a>
+        <a href="newspapers.php">News portal</a>
         <a href="help.php">Help</a>
         <a href="feedback.php">Feedback</a>
         <a href="credit.php">Credit</a>
@@ -54,3 +54,18 @@
   </div>
 
   <div class="clear"></div>
+
+  <!-- <div>
+    <h3>To use this applicaltion you have to follow the instructions</h3>
+    <ul>
+      <li>In home page section please select the news type from the dropdown menu</li>
+      <li>Then select the newsportals from the checkbox in the right sidebar</li>
+      <li>Then press crawl </li>
+    </ul>
+    <p>If you want to select multiple types and multiple portals and want to save your preferces then</p>
+    <ul>
+      <li>Create an account and find this option from right-top most position</li>
+      <li>Now you will get your prefered news just after login</li>
+      <li>If you want to contact with the admin then go to the feedback section and send your valiavle message</li>
+    </ul>
+  </div> -->
