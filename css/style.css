@@ -1,0 +1,781 @@
+		#topbar {
+			width: 1000px;
+			margin-left: 1100px;
+			padding: 0;
+			background-color: #ffffff;
+			height: 40px;	
+			color: #000000;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Times New Roman;
+		}
+		#logo {
+			margin-top:  8px;
+			width: 100px;
+			float: left;
+			margin-right: 8px;
+		}
+		.topbar-section {
+			float: left;
+			border-left: 1px #cccccc solid;
+			height: 100%;
+		}
+		#signin-image {
+			width: 25px;
+			margin: 12px 15px;
+			float: left;
+		}
+		#signin-text {
+			font-weight: bold;
+			font-size: 90%;
+			position: relative;
+			top: 9px;
+		}
+		#signin-text a {
+			text-decoration: none;
+			color: #000000;
+		}
+		#signin-text a:hover {
+			color: #008000;
+		}
+		.topbar-section {
+			color: #000000;
+		}
+		.topbar-menu {
+			font-weight: bold;
+			font-size: 90%;
+			padding: 14px 15px 0 15px;
+			height: 27px;
+		}
+		.menu-text {
+			font-weight: bold;
+			font-size: 90%;
+			position: relative;
+			top: 9px;
+			float: left;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.menu-text a {
+			text-decoration: none;
+			color: #000000;
+		}
+		.menu-text a:hover {
+			color: #008000;
+		}
+		.clear {
+			clear: both;
+		}	
+		#menu-bar-container {
+			background-color: #ffffff;
+			width: 100%;
+			height: 70px;
+			border-top: 1px solid #cccccc;
+		}
+		#menu-bar {
+			width: 1000px;
+			margin: 0 auto;
+
+		}
+		h1 {
+			padding: 0;
+			margin: 0 auto;
+			color: #000000;
+			font-size: 40px;
+			font-weight: normal;
+			padding-top: 10px;
+			float: left;
+			margin-left: 350px;
+			padding-bottom: 10px;
+		}
+		#menu-bar-2-container {
+			background-color: #ffffff;
+			width: 100%;
+		}
+		#menu-bar-2 {
+			width: 1000px;
+			margin: 0 auto;
+			height: 30px; 
+		}
+		#menu-bar-2 a {
+			color: #000000;
+			text-decoration: none;
+			margin-top: 5px;
+			padding: 0 10px;
+			border-right: 1px solid #BB4545;
+			font-size: 14px;
+			position: relative;
+			top: 6px;
+		}
+		#menu-bar-2 a:hover {
+			text-decoration: underline;
+			color: #008000;
+
+		}
+		#page-container {
+			width: 1000px;
+			margin: 0 auto;
+		}
+		#main-article {
+
+		}
+		h2 {
+			font-weight: normal;
+			margin-top: 40px;
+			font-size: 20px;
+			width: 105px;
+			text-transform: capitalize;
+		}
+		h3 a {
+			color: #000000;
+			font-size: 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		h3 a:hover {
+			color: #1167a8;
+
+		}
+		#article-summary {
+			color: #5a5a5a;
+			width: 220px;
+			float: left;
+
+		}
+		.topic-link {
+			text-decoration: none;
+			color: #a91717;
+			border-left: 1px solid #cccccc;
+			padding: 10px;
+		}
+		.topic-link:hover {
+			color: #1167a8;
+
+		}
+		#date {
+			padding-right: 10px;
+		}
+		#article-container {
+			float: left;
+			width: 670px;
+			border-right: 1px solid #cccccc;
+			padding-right: 20px;
+			margin-bottom: 100px;
+		}
+		#main-article-img {
+			width: 300px;
+			margin-left: 20px;
+		}
+		#article-hr {
+			border-top: 1px solid #a91717;
+			width: 150px;
+
+		}
+		#side-bar {
+			margin-left: 20px;
+			width: 200px;
+			float: right;
+			position: relative;
+			top: -480px;
+		}
+		.side-bar-link {
+			text-decoration: none;
+			color: #000000;
+			font-weight: bold;
+			font-size: 13px;
+		}
+		.side-bar-link:hover {
+			color: #1167a8;
+		}
+		h4 {
+			font-size: 20px;
+			font-weight: normal;
+		}
+		.side-bar-img {
+			float: left;
+			width: 90px;
+			margin-right: 10px;
+		}
+		.side-bar-article {
+			float: right;
+		    width: 200px;
+		    position: relative;
+		    top: -15px;
+		}
+		.no-border {
+			border-left: none;
+			padding: 0; 
+		}
+		.border-right {
+			border-right: 1px solid #cccccc;
+			padding-left: 10px;
+		}
+		#hr {
+			margin: 0 auto;
+			padding-top: 25px;
+			width: 1010px;
+		}
+
+
+
+
+		* {
+		    box-sizing: border-box;
+		}
+
+		input[type=text], input[type=Password] {
+		    width: 100%;
+		    padding: 12px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    resize: vertical;
+		}
+
+		label {
+		    padding: 12px 12px 12px 0;
+		    display: inline-block;
+		}
+
+		input[type=submit] {
+		    background-color: #4CAF50;
+		    color: white;
+		    padding: 12px 20px;
+		    border: none;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    float: right;
+		}
+
+		input[type=submit]:hover {
+		    background-color: #45a049;
+		}
+
+		.container {
+		    border-radius: 5px;
+		    background-color: #ffffff;
+		    padding: 20px;
+		    width: 750px;
+		    height: 350px;
+		    margin-left: 400px;
+		    position: relative;
+		    top: 20px;
+		    right: 100px;
+		}
+		.feedbackContainer {
+		    border-radius: 5px;
+		    background-color: #ffffff;
+		    padding: 20px;
+		    width: 750px;
+		    height: 350px;
+		    margin-left: 400px;
+		    position: relative;
+		    top: 16px;
+		    right: 200px;
+		}
+		#accountButton {
+			position: relative;
+			top: -100px;
+			right: 590px;
+		}
+		#admintext {
+
+		}
+		.button {
+		    background-color: #4CAF50; /* Green */
+		    border: none;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		}
+
+		.button1 {
+		    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+
+		.button2:hover {
+		    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+
+		#seperate {
+		  margin-top: 15px;
+		  margin-right: 0px;
+		}
+
+		#personalInfo {
+			float: left;
+			position: relative;
+			right: 170px;
+			width: 555px;
+		}
+		#preferences {
+			float: right;
+
+		}
+
+
+
+
+		* {
+		    box-sizing: border-box;
+		}
+
+		input[type=text], input[type=Password], input[type=textarea] {
+		    width: 100%;
+		    padding: 12px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    resize: vertical;
+		}
+
+		input[type=textarea] {
+			height: 150px;
+		}
+
+		label {
+		    padding: 12px 12px 12px 0;
+		    display: inline-block;
+		}
+		input[type=text], select {
+		    width: 100%;
+		    padding: 12px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    resize: vertical;
+		    font-family: Times New Roman;
+		}
+		input[type=submit] {
+		    background-color:#4CAF50;
+		    color: white;
+		    font-weight: bold;
+		    padding: 12px 20px;
+		    border: none;
+		    border-radius: 8px;
+		    cursor: pointer;
+		    float: right;
+		    margin-top: 155px;
+		    margin-right: 27px;
+		    font-size: 20px;
+		}
+
+		#feedbackbutton {
+			position: relative;
+			top: -120px;
+			right: 590px;
+		}
+
+		.passLabel {
+		        color : green;
+		        font-size : 28px;
+		        font-weight : bold;
+		        display: block;
+		        float: left;
+		        margin-left: : -10px;
+		        text-shadow: 2px 2px 5px red;
+		      }
+		.passValue {
+		  color: red;
+		  font-size: 48px;
+		  font-weight: bold;
+		  float: left;
+		  margin-top: 10px;
+		  padding-left: : 50px;
+		  margin-left: 50px;
+		  text-shadow: 2px 2px 5px green;
+		}
+		input[type=submit]:hover {
+		    background-color: #45a049;
+		}
+		input[type=submit]:active {
+		  background-color: #45a049;
+		  box-shadow: 0 10px #666;
+		  transform: translateY(4px);
+		}
+		
+
+
+
+
+			.checkContainer {
+				display: block;
+			    position: relative;
+			    padding-left: 35px;
+			    margin-bottom: -20px;
+			    cursor: pointer;
+			    font-size: 15px;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
+			    text-transform: capitalize;
+			}
+
+			/* Hide the browser's default checkbox */
+			.checkContainer input {
+			    position: absolute;
+			    opacity: 0;
+			    cursor: pointer;
+			}
+
+			/* Create a custom checkbox */
+			.checkmark {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    height: 20px;
+			    width: 20px;
+			    margin-top: 12px;
+			    background-color: #eee;
+			}
+
+			/* On mouse-over, add a grey background color */
+			.checkContainer:hover input ~ .checkmark {
+			    background-color: #ccc;
+			}
+
+			/* When the checkbox is checked, add a blue background */
+			.checkContainer input:checked ~ .checkmark {
+			    background-color: #45A049;
+			}
+
+			/* Create the checkmark/indicator (hidden when not checked) */
+			.checkmark:after {
+			    content: "";
+			    position: absolute;
+			    display: none;
+			}
+
+			/* Show the checkmark when checked */
+			.checkContainer input:checked ~ .checkmark:after {
+			    display: block;
+			}
+
+			/* Style the checkmark/indicator */
+
+			.checkContainer .checkmark:after {
+			    left: 6px;
+			    top: 1px;
+			    width: 5px;
+			    height: 10px;
+			    border: solid white;
+			    border-width: 0 3px 3px 0;
+			    -webkit-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+			    transform: rotate(45deg);
+			}
+
+	/*  css for newsItem page */
+
+	.newsItem {
+		width: 580px;
+	}
+	.newsItem h2{
+		font-weight: normal;
+		margin-top: 40px;
+		font-size: 20px;
+		margin-bottom: 25px;
+		width: 580px;
+		text-transform: capitalize;
+	}
+	.newsItem h4 {
+		font-weight: bold;
+		font-weight: 24px;
+	}
+	.newsItem h4 a {
+		text-decoration: none;
+		font-size: 30px;
+		color: #000000;
+		text-transform: capitalize;
+	}
+	.newsItem h4 a:hover {
+		color: green;
+	}
+	.newsItem p {
+		font-weight: normal;
+		font-size: 25px;
+		text-indent: 25px;
+	}
+
+	#errormsg {
+		margin-left: 450px;
+		color: red;
+		font-size: 25px;
+		margin-top: 15px;
+	}
+
+	/*  for notes textarea */
+
+	#notes {
+		float: right;
+		position: fixed;
+		left: 925px;
+		top: 230px;
+		width: 274px;
+   		height: 400px;
+	}
+
+	#editor {
+
+		width: 274px;
+    	height: 326px;
+    	border: 1px solid #000000;
+    	font-family: Times new Roman;
+    	font-size: 16px;
+
+	}
+
+	#save_notes {
+		color: black;
+		margin: 0;
+    	margin-top: 0px;
+		margin-top: 20px;
+		background: #ffffff;
+		border: 1px solid #000000;
+		font-weight: normal;
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	#date {
+
+	}
+	#note {
+		margin-bottom: 80px;
+	}
+	#reference {
+
+	}
+	#go_site {
+
+	}
+	#go_site a{
+		color: #000000;
+		text-decoration: none;
+
+	}
+	#go_site a:hover {
+		color: green;
+		font-size: 18px;
+
+	}
+	#about_news {
+		
+	}
+	#actions {
+		float: right;
+	}
+	#edit {
+		    color: #000000;
+		    text-decoration: none;
+		    margin: 5px;
+		    border: 1px solid #000000; 
+		    padding-left: 20px;
+		    padding-right: 20px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+	}
+	#edit:hover {
+		color: #ffffff;
+		background: blue;
+	}
+	#delete {
+
+		color: #000000;
+	    text-decoration: none;
+	    margin: 5px;
+	    border: 1px solid #000000;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	   
+	}
+	#delete:hover {
+		color: #ffffff;
+		background: red;
+	}
+
+	#note_editor textarea{
+		font-size: 20px;
+	}
+
+
+
+
+/*   admin panlel  */
+
+#admin-page-container {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#dashboard {
+		float: right;
+		width: 80%;
+		position: relative;
+		top: -1000px;
+		padding-top: 200px;
+		
+}
+
+#dashboard h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#dashboard h1:hover {
+	font-size: 50px;
+}
+
+#menu-bar-left {
+		width: 30%;
+		position: relative;
+		top: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color:  #333333;
+    font-size: 23px;
+}
+
+
+.sidenav {
+    eight: 100%;
+	width: 20%;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 20px;
+	height: 1012px;
+	position: relative;
+	top: 55px;
+}
+
+.sidenav a {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #333333;
+    font-size: 23px;
+}
+
+/*  subscribers list */
+
+#list_pane {
+		float: right;
+		width: 80%;
+		position: relative;
+		top: -1000px;
+		padding-top: 42px;
+		
+}
+
+#subscribers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#subscribers td, #subscribers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#subscribers tr:nth-child(even){background-color: #f2f2f2;}
+
+#subscribers tr:hover {background-color: #ddd;}
+
+#subscribers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1C351C;
+    color: white;
+}
+
+#ban {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+
+#ban:hover {
+
+	color: blue;
+	
+}
+
+#view {
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+}
+#view:hover {
+	color: blue;
+}
+#delete {
+
+}
+#delete:hover {
+
+}
+#reply {
+
+}
+#reply:hover {
+
+}
+
+.forgot {
+
+	background: #ffffff;
+	color: #000000;
+	text-align: center;
+	padding: 15px 32px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+
+
+.forgot:hover {
+
+	font-size: 18px;
+
+}
